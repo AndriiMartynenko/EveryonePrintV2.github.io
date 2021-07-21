@@ -596,8 +596,9 @@ window.onload = function () {
 				});
 			})
 		};
-		if (window.innerWidth > 768 && isMobile.any()) {
-			if (target.classList.contains('menu__arrow')) {
+
+		if (window.innerWidth > 768) {
+			if (target.classList.contains('menu__arrow') || target.classList.contains('menu__link')) {
 				_removeClasses(document.querySelectorAll('.menu__item._hover'), "_hover");
 				target.closest('.menu__item').classList.add('_hover');
 			}
