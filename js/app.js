@@ -606,10 +606,10 @@ window.onload = function () {
 				_removeClasses(document.querySelectorAll('.menu__item._hover'), "_hover");
 			}
 		}
-		if (target.closest('.filter__item')) {
+		if (target.closest('.filter-news__item')) {
 			e.preventDefault();
-			_removeClasses(document.querySelectorAll('.filter__item'), "_active");
-			target.closest('.filter__item').classList.add('_active')
+			_removeClasses(document.querySelectorAll('.filter-news__item'), "_active");
+			target.closest('.filter-news__item').classList.add('_active')
 		}
 	}
 }
