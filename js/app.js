@@ -689,6 +689,7 @@ window.onload = function () {
 
 	function documentActions(e) {
 		const target = e.target;
+		console.log(target);
 		/* if (document.querySelector('.scrolltop') && target.closest('.scrolltop')) {
 					target.addEventListener('click', () => {
 						window.scroll({
