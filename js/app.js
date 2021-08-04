@@ -343,9 +343,10 @@ if (spollersArray.length > 0) {
 					hideSpollersBody(spollersBlock);
 				}
 				spollerTitle.classList.toggle('_active');
-				spollerTitle.closest('.body-updates__wrapper').querySelector('.body-updates__description').classList.toggle('hidden-description')
+				if (spollerTitle.closest('.body-updates__wrapper').querySelector('.body-updates__description')) {
+					spollerTitle.closest('.body-updates__wrapper').querySelector('.body-updates__description').classList.toggle('hidden-description')
+				}
 				_slideToggle(spollerTitle.nextElementSibling, 800);
-
 			}
 			e.preventDefault();
 		}
