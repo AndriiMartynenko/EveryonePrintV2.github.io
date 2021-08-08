@@ -864,7 +864,7 @@ if (spollersArray.length > 0) {
 					hideSpollersBody(spollersBlock);
 				}
 				spollerTitle.classList.toggle('_active');
-				if (spollerTitle.closest('.body-updates__wrapper').querySelector('.body-updates__description')) {
+				if (spollerTitle.closest('body-updates__wrapper')) {
 					spollerTitle.closest('.body-updates__wrapper').querySelector('.body-updates__description').classList.toggle('hidden-description')
 				}
 				_slideToggle(spollerTitle.nextElementSibling, 800);
@@ -1224,6 +1224,29 @@ window.onload = function () {
 			e.preventDefault();
 			_removeClasses(document.querySelectorAll('.filter__item'), "_active");
 			target.closest('.filter__item').classList.add('_active')
+		}
+
+
+		/* Табы */
+		if (window.innerWidth > 768) {
+			if (target.classList.contains('tab')) {
+				e.preventDefault();
+				const tabs = document.querySelectorAll('.tab'),
+					tabsContent = document.querySelectorAll('.content'),
+					id = e.target.getAttribute('href').replace('#', '');
+				console.log(id);
+
+				tabsContent.forEach(
+					child => child.classList.remove('content__active')
+				)
+				tabs.forEach(
+					child => child.classList.remove('tab__active')
+				)
+				target.classList.add('tab__active')
+				document.getElementById(id).classList.add('content__active')
+			}
+
+			/* Табы */
 		}
 	}
 }
