@@ -66,8 +66,6 @@ if (document.querySelector('.slider-updates__body')) {
 	new Swiper('.slider-updates__body', {
 		observer: true,
 		observeParents: true,
-		slidesPerView: 3,
-		spaceBetween: 40,
 		speed: 800,
 		loop: true,
 		watchOverflow: true,
@@ -77,12 +75,8 @@ if (document.querySelector('.slider-updates__body')) {
 			clickable: true,
 		},
 		breakpoints: {
-			320: {
-				slidesPerView: 1.1,
-				spaceBetween: 15,
-			},
-			480: {
-				slidesPerView: 1.4,
+			360: {
+				slidesPerView: 1,
 				spaceBetween: 15,
 			},
 			768: {
@@ -95,8 +89,8 @@ if (document.querySelector('.slider-updates__body')) {
 			},
 			1200: {
 				slidesPerView: 3,
-				spaceBetween: 40,
-			},
+				spaceBetween: 32,
+			}
 		}
 	})
 }
@@ -1232,18 +1226,22 @@ window.onload = function () {
 			if (target.classList.contains('tab')) {
 				e.preventDefault();
 				const tabs = document.querySelectorAll('.tab'),
-					tabsContent = document.querySelectorAll('.content'),
+					tabsContent = document.querySelectorAll('.tabs-content__body'),
 					id = e.target.getAttribute('href').replace('#', '');
 				console.log(id);
 
 				tabsContent.forEach(
-					child => child.classList.remove('content__active')
+					child => child.classList.remove('tabs-content__body-active')
 				)
 				tabs.forEach(
-					child => child.classList.remove('tab__active')
+					child => {
+						child.classList.remove('tab__active');
+						child.closest('.tab__wrapper').classList.remove('tab__shadow')
+					}
 				)
 				target.classList.add('tab__active')
-				document.getElementById(id).classList.add('content__active')
+				target.closest('.tab__wrapper').classList.add('tab__shadow')
+				document.getElementById(id).classList.add('tabs-content__body-active')
 			}
 
 			/* Табы */
