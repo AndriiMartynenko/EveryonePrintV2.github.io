@@ -1204,7 +1204,6 @@ window.onload = function () {
 						});
 					})
 				}; */
-
 		if (window.innerWidth > 768) {
 			if (target.classList.contains('menu__arrow') || target.classList.contains('menu__link')) {
 				_removeClasses(document.querySelectorAll('.menu__item._hover'), "_hover");
@@ -1243,4 +1242,17 @@ window.onload = function () {
 			/* Табы */
 		}
 	}
+	/* 	animData = bodymovin.loadAnimation({
+			container: document.querySelector('#full-featured-anim'),
+			renderer: 'svg',
+			autoplay: false,
+			loop: false,
+			path: '../../json/Full featured signle driver.json'
+		});
+		let animationStart = 0;
+		window.addEventListener('scroll', function () {
+			animData.playSegments([aminationStart, animationStart + 1], true);
+			animationStart++;
+			console.log('123')
+		}) */
 }

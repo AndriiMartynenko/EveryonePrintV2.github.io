@@ -743,7 +743,13 @@ body._lock {
 }
 
 .actions-catalog__select .select__options {
+  margin: 10px 0px 0px 0px;
   color: #2C4251;
+  background: #FFFFFF;
+  border: 1px solid rgba(216, 216, 216, 0.3);
+  -webkit-box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
 }
 
 .actions-catalog__select .select._active .select__value:before {
@@ -837,9 +843,9 @@ body._lock {
   cursor: pointer;
   padding: 5px 15px;
   margin: 0px 0px 0px 0px;
-  -webkit-transition: background 0.3s ease 0s;
-  -o-transition: background 0.3s ease 0s;
-  transition: background 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .select._active {
@@ -3256,7 +3262,7 @@ footer .sub_footer_line ul li a:hover {
 /* start Solving Section */
 
 .solving {
-  background: url("../img/print-drivers/solving-bg.svg") center 10%/100% auto no-repeat;
+  background: url("../img/print-drivers/solving-bg.svg") center 10%/100% 100% no-repeat;
   margin-top: 100px;
   padding-bottom: 130px;
 }
@@ -3584,10 +3590,6 @@ footer .sub_footer_line ul li a:hover {
 .page__connected-simplify {
   background: url("../img/news/connected-simplify-bg.svg") center top/100% auto no-repeat;
   padding-top: 250px;
-}
-
-.connected-simplify {
-  margin: 50px 0;
 }
 
 .connected-simplify__animation lottie-player {
@@ -6475,7 +6477,7 @@ footer .sub_footer_line ul li a:hover {
 /* start One platform section */
 
 .one-platform {
-  background: url("../img/news/large-vinyl-bg.svg") center top/100% 110% no-repeat;
+  background: url("../img/news/one-platform-bg.svg") center center/100% auto no-repeat;
   padding-bottom: 100px;
   padding-top: 150px;
 }
@@ -6497,7 +6499,7 @@ footer .sub_footer_line ul li a:hover {
 .supported-clouds {
   padding-top: 150px;
   padding-bottom: 150px;
-  background: url("../img/news/supported-clouds-bg.svg") center top/100% 150% no-repeat;
+  background: url("../img/news/supported-clouds-bg.svg") center 20%/100% auto no-repeat;
 }
 
 .supported-clouds__title {
@@ -6514,8 +6516,8 @@ footer .sub_footer_line ul li a:hover {
 /* start Advantages hybrid section */
 
 .advantages-hybrid {
-  padding-top: calc(50px + 50 * ((100vw - 320px) / 1120));
-  padding-bottom: calc(50px + 100 * ((100vw - 320px) / 1120));
+  padding-top: 100px;
+  padding-bottom: 150px;
 }
 
 .advantages-hybrid__title {
@@ -8978,6 +8980,14 @@ footer .sub_footer_line ul li a:hover {
     gap: calc(30px + 60 * ((100vw - 320px) / 800));
   }
 
+  .advantages-hybrid {
+    padding-top: calc(50px + 50 * ((100vw - 320px) / 800));
+  }
+
+  .advantages-hybrid {
+    padding-bottom: calc(50px + 100 * ((100vw - 320px) / 800));
+  }
+
   .advantages-hybrid__title {
     font-size: calc(30px + 10 * ((100vw - 320px) / 800));
   }
@@ -10521,6 +10531,11 @@ footer .sub_footer_line ul li a:hover {
   .filter__search-button:hover {
     color: #4d4d4d;
     background: #d7e1f0;
+  }
+
+  .select__option:hover {
+    background: #F8F8F8;
+    color: #D90F16;
   }
 
   .label-card:hover {
