@@ -1242,17 +1242,19 @@ window.onload = function () {
 			/* Табы */
 		}
 	}
-	/* 	animData = bodymovin.loadAnimation({
-			container: document.querySelector('#full-featured-anim'),
-			renderer: 'svg',
-			autoplay: false,
-			loop: false,
-			path: '../../json/Full featured signle driver.json'
-		});
-		let animationStart = 0;
-		window.addEventListener('scroll', function () {
-			animData.playSegments([aminationStart, animationStart + 1], true);
-			animationStart++;
-			console.log('123')
-		}) */
+	// const container = document.querySelector('#full-featured-anim');
+	// const animData = document.querySelector('#full-featured-anim');
+	// animData = bodymovin.loadAnimation({
+	// 	// container: container,
+	// 	renderer: 'svg',
+	// 	autoplay: false,
+	// 	loop: false,
+	// 	path: '../../json/Full featured signle driver.json'
+	// });
+	// let animationStart = 0;
+	// window.addEventListener('scroll', function () {
+	// 	animData.playSegments([aminationStart, animationStart + 1], true);
+	// 	animationStart++;
+	// 	console.log('123')
+	// })
 }
