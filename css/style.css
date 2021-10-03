@@ -8078,6 +8078,228 @@ footer .sub_footer_line ul li a:hover {
 
 /* End Discover More section */
 
+/* Start Security compliance section */
+
+.security-compliance {
+  padding-bottom: 50px;
+  background: url("../img/print-drivers/bg-light.svg") center center/100% auto no-repeat;
+}
+
+.security-compliance__title {
+  color: #D90F16;
+}
+
+.security-compliance__title span {
+  display: block;
+  color: #2C4251;
+}
+
+.security-compliance__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 43.3928571429%;
+          flex: 0 1 43.3928571429%;
+}
+
+.security-compliance__animation {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 55.8928571429%;
+          flex: 0 1 55.8928571429%;
+}
+
+/* End Security compliance section */
+
+/* Start Cloud providers section */
+
+.cloud-providers {
+  padding-top: 200px;
+  padding-bottom: 250px;
+  background: url("../img/news/whats-history-bg.svg") center bottom/100% auto no-repeat;
+  text-align: center;
+}
+
+.cloud-providers__title {
+  font-size: 32px;
+  max-width: 609px;
+  margin-bottom: 40px;
+  letter-spacing: -0.4px;
+}
+
+.cloud-providers__title span {
+  color: #D90F16;
+  line-height: 130%;
+}
+
+.cloud-providers__button {
+  font-weight: 400;
+  letter-spacing: -0.1px;
+  padding: 10.5px 36px;
+  font-size: 22px;
+}
+
+/* End Cloud providers section */
+
+/* Start Level Security section */
+
+.level-security {
+  margin-bottom: 100px;
+}
+
+.level-security__suptitle {
+  font-size: 22px;
+  color: #D90F16;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.1px;
+}
+
+.level-security__title {
+  font-weight: 700;
+  color: #2C4251;
+  font-size: 40px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.level-security__cards {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.level-security__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 31.6071428571%;
+          flex: 0 1 31.6071428571%;
+  background: #FFFFFF;
+  border: 1px solid rgba(216, 216, 216, 0.3);
+  -webkit-box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.level-security__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 26.6666666667%;
+          flex: 0 1 26.6666666667%;
+}
+
+.level-security__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 64.7619047619%;
+          flex: 0 1 64.7619047619%;
+}
+
+.level-security__percent {
+  font-size: 54px;
+  line-height: 130%;
+  letter-spacing: -1px;
+  margin: 0px 0px 10px 0px;
+}
+
+.level-security__text {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.1px;
+  color: #4F4F4F;
+}
+
+/* End Level Security section */
+
+/* Start Plan Cloud section */
+
+.plan-cloud {
+  padding-top: 150px;
+}
+
+.plan-cloud__header {
+  margin-bottom: 150px;
+}
+
+.header-plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-plan__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40.5357142857%;
+          flex: 0 1 40.5357142857%;
+  padding: 0px 0px 38.5714285714% 0px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header-plan__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50.4464285714%;
+          flex: 0 1 50.4464285714%;
+}
+
+.header-plan__title {
+  font-weight: 700;
+  color: #2C4251;
+  font-size: 40px;
+  line-height: 130%;
+  letter-spacing: -0.5px;
+  margin-bottom: 60px;
+  max-width: 95.7522123894%;
+}
+
+.header-plan__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.header-plan__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 14.3362831858%;
+          flex: 0 1 14.3362831858%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 143%;
+  color: #2C4251;
+}
+
+.header-plan__icon:before {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.header-plan__button {
+  font-size: 22px;
+  letter-spacing: -0.1px;
+  font-weight: 400;
+  padding: 10.5px 36px;
+}
+
+/* End Plan Cloud section */
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -10196,6 +10418,78 @@ footer .sub_footer_line ul li a:hover {
 
   .card-discover__text {
     margin-bottom: calc(15px + 10 * ((100vw - 320px) / 800));
+  }
+
+  .security-compliance {
+    padding-bottom: calc(50px + 0 * ((100vw - 320px) / 800));
+  }
+
+  .cloud-providers {
+    padding-top: calc(0px + 200 * ((100vw - 320px) / 800));
+  }
+
+  .cloud-providers {
+    padding-bottom: calc(50px + 200 * ((100vw - 320px) / 800));
+  }
+
+  .cloud-providers__title {
+    font-size: calc(26px + 6 * ((100vw - 320px) / 800));
+  }
+
+  .cloud-providers__title {
+    margin-bottom: calc(20px + 20 * ((100vw - 320px) / 800));
+  }
+
+  .cloud-providers__button {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 800));
+  }
+
+  .level-security {
+    margin-bottom: calc(0px + 100 * ((100vw - 320px) / 800));
+  }
+
+  .level-security__suptitle {
+    font-size: calc(20px + 2 * ((100vw - 320px) / 800));
+  }
+
+  .level-security__title {
+    font-size: calc(32px + 8 * ((100vw - 320px) / 800));
+  }
+
+  .level-security__cards {
+    margin-top: calc(30px + 70 * ((100vw - 320px) / 800));
+  }
+
+  .level-security__card {
+    padding: calc(15px + 5 * ((100vw - 320px) / 800));
+  }
+
+  .level-security__percent {
+    font-size: calc(32px + 22 * ((100vw - 320px) / 800));
+  }
+
+  .plan-cloud {
+    padding-top: calc(50px + 100 * ((100vw - 320px) / 800));
+  }
+
+  .plan-cloud__header {
+    margin-bottom: calc(30px + 120 * ((100vw - 320px) / 800));
+  }
+
+  .header-plan__title {
+    font-size: calc(32px + 8 * ((100vw - 320px) / 800));
+  }
+
+  .header-plan__title {
+    margin-bottom: calc(30px + 30 * ((100vw - 320px) / 800));
+  }
+
+  .header-plan__icons {
+    margin-bottom: calc(30px + 30 * ((100vw - 320px) / 800));
+  }
+
+  .header-plan__icon:before {
+    margin-bottom: calc(10px + 6 * ((100vw - 320px) / 800));
   }
 }
 
