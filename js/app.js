@@ -63,12 +63,16 @@ if (sliderScrollItems.length > 0) {
 function sliders_bild_callback(params) {}
 
 if (document.querySelector('.slider-updates__body')) {
-	new Swiper('.slider-updates__body', {
+	const sliderBody = new Swiper('.slider-updates__body', {
 		observer: true,
 		observeParents: true,
 		speed: 800,
-		loop: true,
 		watchOverflow: true,
+		loopedSlides: 3,
+		simulateTouch: true,
+		touchRatio: 1,
+
+
 		// Dotts
 		pagination: {
 			el: '.slider-updates__dots',
@@ -78,20 +82,32 @@ if (document.querySelector('.slider-updates__body')) {
 			360: {
 				slidesPerView: 1,
 				spaceBetween: 15,
+
+
 			},
 			768: {
 				slidesPerView: 2,
-				spaceBetween: 20,
+
+
 			},
 			992: {
 				slidesPerView: 2,
-				spaceBetween: 32,
+				spaceBetween: 0,
+
+
 			},
-			1200: {
+			1304: {
 				slidesPerView: 3,
-				spaceBetween: 32,
+				spaceBetween: 40,
+				slidesOffsetBefore: 160
 			}
 		}
+	})
+	sliderBody.on('resize', function () {
+		const width = document.querySelector('._container')
+		const marginLeft = window.getComputedStyle(width, null).getPropertyValue('margin-left').replace('px', '')
+		sliderBody.params.slidesOffsetBefore = marginLeft
+		sliderBody.update()
 	})
 }
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
@@ -1242,19 +1258,18 @@ window.onload = function () {
 			/* Табы */
 		}
 	}
-	// const container = document.querySelector('#full-featured-anim');
-	// const animData = document.querySelector('#full-featured-anim');
-	// animData = bodymovin.loadAnimation({
-	// 	// container: container,
-	// 	renderer: 'svg',
-	// 	autoplay: false,
-	// 	loop: false,
-	// 	path: '../../json/Full featured signle driver.json'
-	// });
-	// let animationStart = 0;
-	// window.addEventListener('scroll', function () {
-	// 	animData.playSegments([aminationStart, animationStart + 1], true);
-	// 	animationStart++;
-	// 	console.log('123')
-	// })
+	// const animation = (id) => {
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				const player = entry.target.querySelector('lottie-player')
+				player.play()
+			}
+		})
+	}, {
+		threshold: 0.7
+	});
+	observer.observe(document.querySelector('#full-featured-anim'))
+	// }
+	// animation('full-featured-anim')
 }
