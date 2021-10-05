@@ -3068,6 +3068,7 @@ header .header_second_top ul li a:hover {
 /* New header */
 
 footer {
+  margin-top: 120px;
   padding: 196px 0 0px;
   background: #F8F8F8;
 }
@@ -8162,7 +8163,7 @@ footer .sub_footer_line ul li a:hover {
 .all-tools {
   background: url("../img/news/all-tools-bg.svg") center 25%/100% auto no-repeat;
   margin-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .all-tools__title {
@@ -8191,7 +8192,7 @@ footer .sub_footer_line ul li a:hover {
 
 .discover-more {
   margin-top: 150px;
-  margin-bottom: 250px;
+  padding-bottom: 130px;
 }
 
 .discover-more__body {
@@ -9077,6 +9078,10 @@ footer .sub_footer_line ul li a:hover {
 
   .sub-list__link-resources:not(:last-child) {
     margin-bottom: calc(20px + 0 * ((100vw - 320px) / 800));
+  }
+
+  footer {
+    margin-top: calc(0px + 120 * ((100vw - 320px) / 800));
   }
 
   .footer__bottom {
@@ -10714,7 +10719,7 @@ footer .sub_footer_line ul li a:hover {
   }
 
   .all-tools {
-    padding-bottom: calc(50px + 0 * ((100vw - 320px) / 800));
+    padding-bottom: calc(50px + 50 * ((100vw - 320px) / 800));
   }
 
   .all-tools__title {
@@ -10734,7 +10739,7 @@ footer .sub_footer_line ul li a:hover {
   }
 
   .discover-more {
-    margin-bottom: calc(50px + 200 * ((100vw - 320px) / 800));
+    padding-bottom: calc(50px + 80 * ((100vw - 320px) / 800));
   }
 
   .discover-more__title {
