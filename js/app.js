@@ -1258,7 +1258,7 @@ window.onload = function () {
 			/* Табы */
 		}
 	}
-	// const animation = (id) => {
+
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach(entry => {
 			if (entry.isIntersecting) {
@@ -1269,7 +1269,8 @@ window.onload = function () {
 	}, {
 		threshold: 0.7
 	});
-	observer.observe(document.querySelector('#full-featured-anim'))
-	// }
+	if (document.querySelector('#full-featured-anim')) {
+		observer.observe(document.querySelector('#full-featured-anim'))
+	}
 	// animation('full-featured-anim')
 }
