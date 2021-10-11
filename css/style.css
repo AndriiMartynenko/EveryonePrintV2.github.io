@@ -424,6 +424,11 @@
   content: "";
 }
 
+._icon-info-icon:before {
+  content: "";
+  color: #bdbdbd;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -8913,8 +8918,6 @@ footer .sub_footer_line ul li a:hover {
           flex: 0 1 47.6764199656%;
   background: #FFFFFF;
   border: 1px solid rgba(216, 216, 216, 0.3);
-  -webkit-box-shadow: 0px 11px 21px rgba(0, 0, 0, 0.04);
-          box-shadow: 0px 11px 21px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
   padding: 20px 0;
   display: -webkit-box;
@@ -8933,6 +8936,22 @@ footer .sub_footer_line ul li a:hover {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  position: relative;
+}
+
+.checkbox__info {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  cursor: pointer;
+}
+
+.checkbox__info:before {
+  font-size: 15px;
+  color: #BDBDBD;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .checkbox__input {
@@ -8947,6 +8966,11 @@ footer .sub_footer_line ul li a:hover {
   -webkit-transform: translate(-50%, 0) scale(1);
       -ms-transform: translate(-50%, 0) scale(1);
           transform: translate(-50%, 0) scale(1);
+}
+
+.checkbox__input:checked + .checkbox__label.checkbox {
+  -webkit-box-shadow: 0px 11px 21px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 11px 21px rgba(0, 0, 0, 0.04);
 }
 
 .checkbox__label {
@@ -8977,6 +9001,9 @@ footer .sub_footer_line ul li a:hover {
   border: 1px solid #D90F16;
   border-radius: 50%;
   background-color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .checkbox__label:after {
@@ -9053,6 +9080,11 @@ footer .sub_footer_line ul li a:hover {
   outline: none;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  color: #2C4251;
+}
+
+.inputs__input:active {
+  color: #2C4251;
 }
 
 .country-catalog {
@@ -13658,6 +13690,20 @@ footer .sub_footer_line ul li a:hover {
 
   .card-discover__link:hover:before {
     color: inherit;
+  }
+
+  .checkbox:hover {
+    background: #F8F8F8;
+    -webkit-box-shadow: 0px 11px 21px rgba(0, 0, 0, 0.04);
+            box-shadow: 0px 11px 21px rgba(0, 0, 0, 0.04);
+  }
+
+  .checkbox:hover .checkbox__input:checked + .checkbox__label:before {
+    background: rgba(217, 15, 22, 0.1);
+  }
+
+  .checkbox__info:hover:before {
+    color: #e3e3e3;
   }
 
   .privacy__text a:hover {
