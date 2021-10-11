@@ -67,17 +67,21 @@ if (document.querySelector('.slider-updates__body')) {
 		observer: true,
 		observeParents: true,
 		speed: 800,
+		loop: true,
 		watchOverflow: true,
-		loopedSlides: 3,
+		slidesPerView: 3,
 		simulateTouch: true,
 		touchRatio: 1,
-
-
+		// slidesPerGroup: 1,
 		// Dotts
 		pagination: {
 			el: '.slider-updates__dots',
 			clickable: true,
 		},
+		lazy: {
+			loadPrevNext: true,
+		},
+
 		breakpoints: {
 			360: {
 				slidesPerView: 1,
@@ -99,7 +103,8 @@ if (document.querySelector('.slider-updates__body')) {
 			1304: {
 				slidesPerView: 3,
 				spaceBetween: 40,
-				slidesOffsetBefore: 160
+				slidesOffsetBefore: 160,
+				slidesPerGroup: 1,
 			}
 		}
 	})
