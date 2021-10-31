@@ -71,8 +71,6 @@ if (document.querySelector('.slider-updates__body')) {
 		watchOverflow: true,
 		slidesPerView: 3,
 		simulateTouch: true,
-		touchRatio: 1,
-		// slidesPerGroup: 1,
 		// Dotts
 		pagination: {
 			el: '.slider-updates__dots',
@@ -97,8 +95,6 @@ if (document.querySelector('.slider-updates__body')) {
 			992: {
 				slidesPerView: 2,
 				spaceBetween: 0,
-
-
 			},
 			1304: {
 				slidesPerView: 3,
@@ -1251,8 +1247,22 @@ window.onload = function () {
 				target.closest('.tab__wrapper').classList.add('tab__shadow')
 				document.getElementById(id).classList.add('tabs-content__body-active')
 			}
-
-			/* Табы */
+			if (target.classList.contains('contents-blog__list')) {
+				e.preventDefault();
+				const href = target.getAttribute('href').substring(1);
+				const scrollTarget = document.getElementById(href);
+				const topOffset = 0;
+				const elementPosition = scrollTarget.getBoundingClientRect().top;
+				const offsetPosition = elementPosition - topOffset
+				window.scrollBy({
+					top: offsetPosition,
+					behavior: "smooth"
+				})
+				let scroll = document.querySelector('.contents-blog__scroll');
+				scroll.style.top = `${target.offsetTop-8}px`
+				_removeClasses(document.querySelectorAll('.contents-blog__list'), "_active");
+				target.classList.add('_active')
+			}
 		}
 	}
 
@@ -1261,6 +1271,7 @@ window.onload = function () {
 			if (entry.isIntersecting) {
 				const player = entry.target.querySelector('lottie-player')
 				player.play()
+				console.log(player);
 			}
 		})
 	}, {
@@ -1269,5 +1280,24 @@ window.onload = function () {
 	if (document.querySelector('#full-featured-anim')) {
 		observer.observe(document.querySelector('#full-featured-anim'))
 	}
-	// animation('full-featured-anim')
+
+	const tabInit = (tabContainer) => {
+		const container = document.querySelector(`${tabContainer}`)
+		const blogLeft = document.querySelector('#blog-left')
+		const blogRight = document.querySelector('#blog-right')
+		const documentTop = window.pageYOffset
+		if (documentTop > (container.offsetTop - 10) && documentTop < (container.offsetHeight + 550)) {
+			blogLeft.querySelector('.contents-blog').classList.add('_active')
+			blogRight.querySelector('.social-blog').classList.add('_active')
+		} else {
+			document.querySelector('.contents-blog').classList.remove('_active')
+			blogRight.querySelector('.social-blog').classList.remove('_active')
+		}
+	}
+
+	if (document.querySelector('.blog-content__container') && window.innerWidth > 768) {
+		document.addEventListener('scroll', () => {
+			tabInit('.blog-content__container')
+		})
+	}
 }
