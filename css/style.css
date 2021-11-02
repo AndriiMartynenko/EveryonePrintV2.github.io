@@ -41,6 +41,7 @@
   font-display: block;
 }
 
+.iti__arrow:before,
 ._init .menu-footer__title:before,
 .select__value:before,
 .actions-catalog__select .select__value:before,
@@ -64,6 +65,7 @@
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
 
 ._icon-arrow:before,
+.iti__arrow:before,
 ._init .menu-footer__title:before,
 .select__value:before,
 .actions-catalog__select .select__value:before {
@@ -9270,6 +9272,7 @@ header .header_second_top ul li a:hover {
 }
 
 .inputs__input {
+  width: 100%;
   background: #F8F8F8;
   border-radius: 4px;
   font-size: 16px;
@@ -9302,6 +9305,26 @@ header .header_second_top ul li a:hover {
 
 .inputs__input:active {
   color: #2C4251;
+}
+
+.inputs__input::-webkit-input-placeholder {
+  color: rgba(44, 66, 81, 0.4);
+}
+
+.inputs__input::-moz-placeholder {
+  color: rgba(44, 66, 81, 0.4);
+}
+
+.inputs__input:-ms-input-placeholder {
+  color: rgba(44, 66, 81, 0.4);
+}
+
+.inputs__input::-ms-input-placeholder {
+  color: rgba(44, 66, 81, 0.4);
+}
+
+.inputs__input::placeholder {
+  color: rgba(44, 66, 81, 0.4);
 }
 
 .country-catalog {
@@ -9382,6 +9405,61 @@ header .header_second_top ul li a:hover {
   transition: all 0.3s ease 0s;
   color: #D90F16;
   cursor: pointer;
+}
+
+.iti {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 1 100% !important;
+          flex: 1 1 100% !important;
+}
+
+.iti__flag-container {
+  padding: 0 !important;
+}
+
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type=tel] {
+  padding-left: 80px !important;
+}
+
+.iti__selected-flag {
+  border-right: 1px solid #fff;
+  padding: 0 14px 0 16px !important;
+}
+
+.iti__arrow {
+  margin-left: 14px !important;
+  border: none !important;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.iti__arrow:before {
+  font-size: 12px;
+  color: rgba(44, 66, 81, 0.4);
+}
+
+.iti__arrow--up {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  border: none !important;
 }
 
 /* end HCP Register section */
@@ -12080,6 +12158,20 @@ header .header_second_top ul li a:hover {
 
   .main-case__image:after {
     display: none;
+  }
+
+  .iti--allow-dropdown input,
+  .iti--allow-dropdown input[type=tel] {
+    padding-left: 70px !important;
+    padding-right: 10px !important;
+  }
+
+  .iti__selected-flag {
+    padding: 0px 10px !important;
+  }
+
+  .iti__arrow {
+    margin-left: 10px !important;
   }
 }
 
