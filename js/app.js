@@ -1283,10 +1283,11 @@ window.onload = function () {
 
 	const tabInit = (tabContainer) => {
 		const container = document.querySelector(`${tabContainer}`)
+		const lastArticle = document.querySelectorAll('.blog-content__article')
 		const blogLeft = document.querySelector('#blog-left')
 		const blogRight = document.querySelector('#blog-right')
 		const documentTop = window.pageYOffset
-		if (documentTop > (container.offsetTop - 10) && documentTop < (container.offsetHeight + 550)) {
+		if (documentTop > (container.offsetTop - 10) && documentTop < ((container.offsetTop + container.clientHeight) - (lastArticle[lastArticle.length - 1].clientHeight) / 2)) {
 			blogLeft.querySelector('.contents-blog').classList.add('_active')
 			blogRight.querySelector('.social-blog').classList.add('_active')
 		} else {
@@ -1300,4 +1301,21 @@ window.onload = function () {
 			tabInit('.blog-content__container')
 		})
 	}
+	/* Progress bar */
+	if (document.querySelector('.progress-bar')) {
+		const fullHeight = document.body.scrollHeight,
+			innerHeight = window.innerHeight,
+			progressBarLine = document.querySelector('.progress-bar>.progress-bar__line'),
+			header = document.querySelector('.header'),
+			progressBar = document.querySelector('.progress-bar');
+		window.addEventListener('scroll', () => {
+			progressBarLine.style.width = (pageYOffset * 100 / (fullHeight - innerHeight)) + '%';
+			if (window.pageYOffset > header.clientHeight) {
+				progressBar.classList.add('_active')
+			} else {
+				progressBar.classList.remove('_active')
+			}
+		})
+	}
+	/* Progress bar */
 }

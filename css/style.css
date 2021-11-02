@@ -1472,6 +1472,28 @@ body._lock {
       align-self: end;
 }
 
+.progress-bar {
+  height: 2px;
+  background: transparent;
+  width: 100%;
+  z-index: 50;
+}
+
+.progress-bar__line {
+  height: 2px;
+  width: 0;
+  background: #D90F16;
+  -webkit-transition: width 0.3s ease 0s;
+  -o-transition: width 0.3s ease 0s;
+  transition: width 0.3s ease 0s;
+}
+
+.progress-bar._active {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 ._swiper {
   overflow: hidden;
 }
@@ -6052,19 +6074,58 @@ header .header_second_top ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .register-inner__body-left {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 33.9285714286%;
-          flex: 0 1 33.9285714286%;
+      -ms-flex: 0 1 33.6607142857%;
+          flex: 0 1 33.6607142857%;
 }
 
 .register-inner__body-form {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 65%;
-          flex: 0 1 65%;
-  padding-left: 63px;
+      -ms-flex: 0 1 59.1964285714%;
+          flex: 0 1 59.1964285714%;
+  padding: 40px;
+  background: #FFFFFF;
+  border: 1px solid rgba(216, 216, 216, 0.3);
+  -webkit-box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
+.register-inner .row-privacy-register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.register-inner__button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 9.5px 5px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+.register__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .register-left__image {
@@ -6079,7 +6140,7 @@ header .header_second_top ul li a:hover {
   font-weight: 700;
   font-size: 40px;
   line-height: 130%;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.6px;
   margin: 0px 0px 20px 0px;
 }
 
@@ -9202,7 +9263,7 @@ header .header_second_top ul li a:hover {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
-  margin: 0px 0px 6px 0px;
+  margin: 0px 0px 10px 0px;
   font-size: 14px;
   line-height: 143%;
   color: #2C4251;
@@ -9273,7 +9334,7 @@ header .header_second_top ul li a:hover {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
-  font-size: 10px;
+  font-size: 12px;
   color: #2C4251;
 }
 
@@ -10930,11 +10991,15 @@ header .header_second_top ul li a:hover {
   }
 
   .register-inner__body {
-    margin-top: calc(50px + 55 * ((100vw - 320px) / 800));
+    margin-top: calc(30px + 75 * ((100vw - 320px) / 800));
   }
 
   .register-inner__body-form {
-    padding-left: calc(0px + 63 * ((100vw - 320px) / 800));
+    padding: calc(20px + 20 * ((100vw - 320px) / 800));
+  }
+
+  .register-inner .row-privacy-register {
+    margin-bottom: calc(15px + 5 * ((100vw - 320px) / 800));
   }
 
   .register-left__title {
@@ -12236,6 +12301,14 @@ header .header_second_top ul li a:hover {
   }
 }
 
+@media (max-width: 800px) {
+  .register-inner__body-form {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 62.5%;
+            flex: 0 1 62.5%;
+  }
+}
+
 @media (max-width: 767.98px) {
   .filter__search-wrapper {
     width: 100%;
@@ -12938,6 +13011,24 @@ header .header_second_top ul li a:hover {
     margin: 0;
   }
 
+  .register-inner__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .register-inner__body-left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .register-inner__body-form {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
   .register-left__info {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -13447,24 +13538,6 @@ header .header_second_top ul li a:hover {
 }
 
 @media (max-width: 600px) {
-  .register-inner__body {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-
-  .register-inner__body-left {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
-    margin: 0px 0px 20px 0px;
-  }
-
-  .register-inner__body-form {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
-  }
-
   .discover-more__card {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
